@@ -11,3 +11,378 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,500;1,700&display=swap');
+
+:root {
+  /* main */
+  --width-main: 1200px;
+
+  /* font */
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
+  
+  /* size */
+  --base: 1rem;
+  --sm: calc(var(--base) * 1.5);
+  --med: calc(var(--base) * 3);
+  --large: calc(var(--base) * 5);
+
+  /*  */
+  --shadow: 0 2rem 3rem #777;
+
+  /* border-radius :basic 4px=0.25rem  */
+  --border-radius-4px: 0.3rem;
+
+  /* Animation :basic 300ms=0.3s  */
+  --animation_basic-duration-300ms: 300ms;
+
+  /* letterspacing : basic 0.1rem */
+  --letterspacing-basic: 0.1rem;
+
+    /* color */
+    --color-main1: #fff;
+    --color-main2: #fff;
+    --color-main3: #fff;
+  
+  
+     /* bootstrap */
+    --color-primary: #0d6efd;
+    --color-secondary: #6C757D;
+    --color-success: #198754;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #0dcaf0;
+    --color-light: #f8f9fa;
+    --color-dark: #212529;
+  
+}
+
+*{
+  /* font-family: "Open Sans", sans-serif; */
+
+  text-decoration: none; 
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  /* 🦄margin의 기준선이 border를 기준으로  만들어짐 */
+  box-sizing: border-box;
+
+  /* 🦄 capitalize : 첫 글자만 대문자*/
+  text-transform: capitalize; 
+
+  /* 🦄  모든 transition에 공통으로 넣음. 일일히 각 element마다 transition넣을 필요없음*/
+  transition: all 0.2s linear;   
+
+}
+
+
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  max-width: var(--width-main);
+  text-align: center;
+  margin: auto;
+  padding: 0 auto;
+
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+
+  /* 🍀1200px (75rem)  */
+  @media (min-width: 1200px) {
+
+  }
+
+  
+  /* @  992px (62rem) */
+  @media (max-width: 992px) {
+
+    /* 992px기준으로 만들기 */
+  }
+
+
+  /* @ 768px (48rem) */
+  @media (max-width: 768px) {
+  
+  }
+  
+  /* @ 576px (36rem)  */
+  @media (max-width: 576px) {
+ 
+  }
+  
+
+
+/*  */
+
+
+/* 🍀
+universal tag - class
+media query
+*/
+/* 
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.app__bg {
+  background: #212529;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+
+.app__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+
+.app__wrapper_info {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+
+.app__wrapper_img {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 2rem;
+}
+
+
+
+
+.app__wrapper_img-reverse {
+  justify-content: flex-start;
+  margin-right: 2rem;
+}
+
+
+.app__wrapper_img img {
+  width: 80%;
+}
+
+.custom__button {
+  background-color: var(--color-crimson);
+    color: var(--color-black);
+    font-family: var(--font-base);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 28px;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+  .explain{
+    background-color: green;
+  }
+
+.p__cormorant {
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  line-height: 29.9px;
+  font-size: 23px;
+}
+
+
+.p__opensans {
+  font-family: var(--font-alt);
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.headtext__cormorant {
+  font-family: var(--font-base);
+  color: var(--color-golden);
+  font-size: 64px;
+  line-height: 83.2px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+
+.spoon__img {
+  width: 45px;
+}
+
+@media screen and (min-width: 2000px) {
+  .custom__button,
+  .p__cormorant {
+    font-size: 37px;
+    line-height: 67px;
+  }
+
+  .p__opensans {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .headtext__cormorant {
+    font-size: 150px;
+    line-height: 210px;
+  }
+
+  .spoon__img {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .app__wrapper {
+    flex-direction: column;
+  }
+
+  .app__wrapper_img {
+    margin: 5rem 0 0 0;
+  }
+
+  .app__wrapper_img-reverse {
+    margin: 0 0 5rem 0;
+  }
+
+  .app__wrapper_img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section__padding {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  
+  .p__cormorant {
+    font-size: 21px;
+  }
+
+  .p__opensans {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .p__opensans {
+    font-size: 12px;
+  }
+
+  .p__cormorant {
+    font-size: 19px;
+  }
+
+  .headtext__cormorant {
+    font-size: 45px;
+    line-height: 70px;
+  }
+}
+ */
+
+
+/* 🍀
+Universal tags - body
+:root
+font
+keyframe
+*/
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
+  
+  --color-golden: #DCCA87;
+  --color-black: #212529;
+  --color-gray: #545454;
+  --color-crimson: #F5EFDB;
+  --color-grey: #AAAAAA;
+  --color-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  
+  color: unset;
+  text-decoration: none;
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+ */
