@@ -1,9 +1,14 @@
+
+// 🍀js0309.router
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+
+
 import Cartjs from "./components/Cartjs";
-import Homejs from "./components/Homejs";
 import Nav from "./components/Nav";
 import Products from "./components/Products";
+
+import "./App.css";
+
 
 function App() {
   return (
