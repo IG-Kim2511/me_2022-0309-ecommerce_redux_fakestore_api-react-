@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+import "./Products.css"
+
 const Products = () => {
   const [data, setData] = useState([]);
 
@@ -20,7 +22,27 @@ const Products = () => {
     }, [])
 
 
-  return <div>Products</div>;
+    return (
+        <div className="products">
+
+            <div className="button-container">
+                <button className="myBtn">All</button>
+                <button className="myBtn">Men</button>
+                <button className="myBtn">Women</button>
+                <button className="myBtn">Jewelery</button>
+                <button className="myBtn">Electronic</button>
+            
+            </div>
+            
+     
+        
+        </div>
+      )
 };
+
+
+
+
+
 
 export default Products;
