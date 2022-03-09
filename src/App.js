@@ -12,8 +12,8 @@ function App() {
 
       
       <Routes>
-        <Route path="/" element={<Homejs />} />
-        <Route path="/products" element={<Products />} />
+        
+        <Route path="/" element={<Products />} />
         <Route path="cart" element={<Cartjs />} />
       </Routes>
     </div>

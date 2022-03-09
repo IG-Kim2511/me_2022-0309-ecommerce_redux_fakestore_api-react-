@@ -5,9 +5,9 @@ import './Nav.css'
 const Nav = () => {
   return (
     <div className="nav">
-        <Link to="/"  className="item">home</Link>
-        <Link to='/products' className="item">products</Link>
-        <Link to='/cart' className="item">Cart</Link>
+        
+        <Link to="/" className="item">products</Link>
+        <Link to="/cart" className="item">Cart</Link>
     
     </div>
   )
