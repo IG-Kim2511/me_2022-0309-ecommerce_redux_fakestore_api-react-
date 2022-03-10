@@ -86,30 +86,6 @@ const Products = () => {
           ))}
         </div>
 
-        
-        {/* 🥒js0309-0630.  */}
-        {       
-    /*  <div className="items-container">
-          {data.map((data_item) => (
-            <div className="items" key={data_item.id}>
-              <div className="item">
-                <div className="img-parent">
-                  <img src={data_item.image} alt={data_item.title} />
-                </div>
-                <div className="title">
-                  {data_item.title.substring(0, 12)}...
-                </div>
-                <div className="price">$ {data_item.price}</div>
-                <div className="description">
-                  {data_item.description.substring(0, 12)}...
-                </div>
-                <button className="myBtn">Buy Now</button>
-              </div>
-            </div>
-          ))}
-        </div> */
-        }
-
       </div>
     );
   };
