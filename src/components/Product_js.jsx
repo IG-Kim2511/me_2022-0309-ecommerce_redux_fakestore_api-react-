@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { addCart } from "../redux/action";
 
 import "./Product_js.css";
 
@@ -36,6 +38,16 @@ const Product_js = () => {
     fetchItems();
   }, []);
 
+
+
+  // 🥒js0310-0440. redux 
+  
+  const dispatch = useDispatch();
+  const addProduct = (p_product)=>{
+    dispatch(addCart(p_product))
+  }
+
+
   const Loading = () => {
     return (
       <div>
@@ -64,7 +76,9 @@ const Product_js = () => {
             <div className="description">Desc: {data_product.description}</div>
           </div>
         </div>
-        <button className="myBtn">add to cart</button>
+
+        {/* 🥒js0310-0440. redux  */}
+        <button className="myBtn" onclick={addProduct(data_product)} >add to cart</button>
       </div>
     );
   };

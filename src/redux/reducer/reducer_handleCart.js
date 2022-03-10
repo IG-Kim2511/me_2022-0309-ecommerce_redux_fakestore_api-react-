@@ -1,7 +1,10 @@
 /* 🍀js0310-0440. redux 
  👉redux/action/index.js
-👉redux/reducer/index.js
-👉redux/store.js
+ 👉redux/reducer/index.js
+ 👉redux/store.js 
+ 👉./index.js
+ 👉./components/nav.js
+ 👉./Product_js
 
 
 🍄
@@ -61,7 +64,7 @@ const reducer_handleCart = (state = cart, action) => {
             return state.filter((x)=>x.id !== exist_del.id);
             
         }else{
-            return state.map((x)=> x.id === action_product.id ? {...x,qty: x.qty-1 : x} );
+            return state.map((x)=> x.id === action_product.id ? {...x,qty: x.qty-1} : x );
         }
 
         break;
