@@ -1,3 +1,30 @@
+/* 🍀js0310-0440. redux 
+ 👉redux/action/index.js
+👉redux/reducer/index.js
+
+
+🍄
+10. action.type 체크
+
+20. if (ADDITEM )
+
+cart.id === clicked.id  ..... qty+1
+
+cart.id !== clicked.id  ...카트에 없는 상품.. qty: 1 
+
+
+30. if (DELITEM )
+
+qut ===1 일때, 
+
+카트안의 id !== 클릭한것 id... 그냥 return
+
+
+qut !==1 일때, 
+
+카트안의 id === 클릭한 id.... qty -1
+*/
+
 const cart = [];
 
 const reducer_handleCart = (state = cart, action) => {

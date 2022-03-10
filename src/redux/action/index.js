@@ -1,3 +1,5 @@
+// 🥒js0310-0440. redux
+
 // 🍀js0310-0422 add item to cart
 
 export const addCart = (p_product) =>{
