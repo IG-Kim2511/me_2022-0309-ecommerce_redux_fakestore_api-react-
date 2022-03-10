@@ -10,9 +10,9 @@ const Nav = () => {
   return (
     <div className="nav">
         
-        <Link to="/" className="item">Home</Link>
-        <Link to="/products" className="item">products</Link>
-        <Link to="/cart" className="item">Cart</Link>
+        <Link to="/" className="item myBtn">Home</Link>
+        <Link to="/products" className="item myBtn">products</Link>
+        <Link to="/cart" className="item myBtn">Cart</Link>
     
     </div>
   )

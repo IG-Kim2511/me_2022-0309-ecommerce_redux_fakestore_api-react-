@@ -50,7 +50,7 @@ const Product_js = () => {
        */
   const ShowProduct = () => {
     return (
-      <div>
+      <div className="items-wrap">
         <div className="items" key={data_product.id}>
           <div className="item">
             <div className="img-parent">
@@ -64,6 +64,7 @@ const Product_js = () => {
             <div className="description">Desc: {data_product.description}</div>
           </div>
         </div>
+        <button className="myBtn">add to cart</button>
       </div>
     );
   };
