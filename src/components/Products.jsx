@@ -4,8 +4,11 @@ import React, { useEffect, useState } from "react";
 import "./Products.css";
 
 const Products = () => {
-  // 🥒js0309-0630
+  // 🥒js0309-1140, filtered data vs fetched data 구별하기용
   const [data, setData] = useState([]);
+
+  //🍀JS0309-1140, filter by category btn
+    const [filterData, setFilterData] = useState(data);
 
   // 🍀js0309-0610. loading
   /* 🍄
@@ -14,40 +17,79 @@ const Products = () => {
   */
   const [loading, setLoading] = useState(false);
 
-   // 🍀js0309-0630. fetch data, {data_item.description.substring(0, 12)}...
+  // 🍀js0309-0630. fetch data, {data_item.description.substring(0, 12)}...
   useEffect(() => {
     const fetchItems = async () => {
+
+      setLoading(true);
+
       const result = await axios("https://fakestoreapi.com/products");
 
-      console.log(result);
       console.log(result.data);
 
       setData(result.data);
+      setFilterData(result.data);
 
       setLoading(false);
     };
     fetchItems();
   }, []);
 
+
+    // 🥒JS0309-1140
+  const filterProductFunc = (p_item) => {
+      console.log(p_item)
+
+      const updatedList= data.filter((x)=>x.category === p_item)
+
+      setFilterData(updatedList);    
+
+  }
+
   // 🥒js0309-0610.
   const Loading = () => {
-    return <div>Loading....</div>;
+    return <h1>Loading....</h1>;
   };
 
   const ShowProducts = () => {
     return (
       <div>
-        {/* 🥒js0309-0610.  */}
+        {/* 🥒js0309-0610. 🥒JS0309-1140, */}
         <div className="button-container">
-          <button className="myBtn">All</button>
-          <button className="myBtn">Men</button>
-          <button className="myBtn">Women</button>
-          <button className="myBtn">Jewelery</button>
-          <button className="myBtn">Electronic</button>
+          <button className="myBtn" onClick={()=>setFilterData(data)}>All</button>
+          <button className="myBtn" onClick={()=>filterProductFunc("men's clothing")}>Men</button>
+          <button className="myBtn" onClick={()=>filterProductFunc("women's clothing")}>Women</button>
+          <button className="myBtn" onClick={()=>filterProductFunc("jewelery")}>Jewelery</button>
+          <button className="myBtn" onClick={()=>filterProductFunc("electronics")}>Electronic</button>
         </div>
 
+
+        
+        {/* 🥒js0309-0630, 🥒JS0309-1140, */}
         <div className="items-container">
-          {/* 🥒js0309-0630.  */}
+          {filterData.map((filter_item) => (
+            <div className="items" key={filter_item.id}>
+              <div className="item">
+                <div className="img-parent">
+                  <img src={filter_item.image} alt={filter_item.title} />
+                </div>
+                <div className="title">
+                  {filter_item.title.substring(0, 12)}...
+                </div>
+                <div className="price">$ {filter_item.price}</div>
+                <div className="description">
+                  {filter_item.description.substring(0, 12)}...
+                </div>
+                <button className="myBtn">Buy Now</button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        
+        {/* 🥒js0309-0630.  */}
+        {       
+    /*  <div className="items-container">
           {data.map((data_item) => (
             <div className="items" key={data_item.id}>
               <div className="item">
@@ -65,7 +107,9 @@ const Products = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */
+        }
+
       </div>
     );
   };
@@ -73,7 +117,7 @@ const Products = () => {
   return (
     <div className="products">
       {/*🥒js0309-0610.  */}
-      {loading ? <Loading /> : <ShowProducts />}
+      {loading ? <Loading/> : <ShowProducts/>}
     </div>
   );
 };
