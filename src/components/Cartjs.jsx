@@ -6,12 +6,7 @@ const Cartjs = () => {
 
   return (
     <div className="cartjs">
-      <div className="item">
-        <div className="title">Name: {state.title}</div>
-        <div className="price">$ {state.price}</div>
-
-        <div className="description">Desc: {state.description}</div>
-      </div>
+          hi
     </div>
   );
 };
