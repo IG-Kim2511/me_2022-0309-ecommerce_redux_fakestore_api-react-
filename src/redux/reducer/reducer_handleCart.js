@@ -1,6 +1,7 @@
 /* 🍀js0310-0440. redux 
  👉redux/action/index.js
 👉redux/reducer/index.js
+👉redux/store.js
 
 
 🍄
