@@ -16,7 +16,7 @@ const Products = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // 🍀js0309-0630. fetch data
+  // 🍀js0309-0630. fetch data, {data_item.description.substring(0, 12)}...
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios("https://fakestoreapi.com/products");
@@ -48,15 +48,18 @@ const Products = () => {
           <button className="myBtn">Electronic</button>
         </div>
 
-        <div className="container">
+        <div className="items-container">
             {/* 🧨js0309-0630.  */}
             {data.map((data_item) => (
-            <div className="items-container" key={data_item.id}>
-                <div className="items">
+            <div className="items" key={data_item.id}>
+                <div className="item">
                 <div className="img-parent">
-                    <img src={data_item.image} />
+                    <img src={data_item.image} alt={data_item.title}/>
                 </div>
-                <div className="items">{data_item.title}</div>
+                <div className="items">{data_item.title.substring(0, 12)}...</div>
+                <div className="price">$ {data_item.price}</div>
+                <div className="description">{data_item.description.substring(0, 12)}...</div>
+                <button className="myBtn">Buy Now</button>
                 </div>
             </div>
             ))}

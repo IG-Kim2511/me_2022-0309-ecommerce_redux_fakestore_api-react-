@@ -12,17 +12,20 @@
 
 }
 
-.products .container{
+.products .items-container{
     display:flex;
     justify-content: center;
-    align-items:center;
+    align-items:end;
     flex-wrap: wrap;
     
     
 }
-.products .items{
-    width:10rem ;
-    padding:1rem;
-    
+.products .item{
+    width:20rem;
+    padding:1rem;   
 
+}
+
+.products .items-container .myBtn{
+    margin-top: 2rem;
 }
