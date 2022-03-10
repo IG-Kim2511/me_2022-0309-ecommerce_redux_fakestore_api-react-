@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Products.css";
 
@@ -77,10 +78,15 @@ const Products = () => {
                   {filter_item.title.substring(0, 12)}...
                 </div>
                 <div className="price">$ {filter_item.price}</div>
+
+                
                 <div className="description">
                   {filter_item.description.substring(0, 12)}...
                 </div>
-                <button className="myBtn">Buy Now</button>
+
+                {/* 🥒0310-0255, Link, ~~/products/{id} 👉Product_js */}            
+                  <Link to={`/products/${filter_item.id}`}  className="myBtn">Buy Now</Link>
+             
               </div>
             </div>
           ))}
