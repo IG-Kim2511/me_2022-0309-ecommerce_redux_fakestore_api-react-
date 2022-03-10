@@ -1,0 +1,25 @@
+
+.product_js .items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product_js .img-parent,
+.product_js .title,
+.product_js .price,
+.product_js .description{
+    padding: 2rem;
+
+    text-align: left;
+}
+
+.product_js .title,
+.product_js .price,
+.product_js .description{
+    /* display: block; */
+    /* padding-left: 20rem; */
+    /* background-color: yellow; */
+
+}
