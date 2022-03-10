@@ -97,6 +97,10 @@ body {
   border:1px red solid;
 }
 
+img{
+  width: 100%;
+}
+
 .myBtn {
   box-shadow: 0px 1px 0px 0px #f0f7fa;
   background: linear-gradient(to bottom, #198754 5%, #198754 100%);
