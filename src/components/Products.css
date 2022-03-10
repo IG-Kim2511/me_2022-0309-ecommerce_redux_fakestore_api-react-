@@ -1,6 +1,3 @@
-.products{
-
-}
 
 
 .products .button-container{
@@ -18,14 +15,19 @@
     align-items:end;
     flex-wrap: wrap;
     
-    
+    padding:5rem;
 }
-.products .item{
-    width:20rem;
-    padding:1rem;   
+.products .items{
+    
+    padding:1rem;
+       
 
 }
 
 .products .items-container .myBtn{
     margin-top: 2rem;
+
+    background: linear-gradient(to bottom, #dc3545 5%, #dc3545 100%);
+    background-color: #dc3545;    
+    border: 1px solid #dc3545;
 }

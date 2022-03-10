@@ -4,17 +4,19 @@ import React, { useEffect, useState } from "react";
 import "./Products.css";
 
 const Products = () => {
-  // 🧨js0309-0630
+  // 🥒js0309-0630
   const [data, setData] = useState([]);
-  const [filter, setFilter] = useState(data);
 
   // 🍀js0309-0610. loading
   /* 🍄
     fetch data 완료전에는 loading
     fetch data 완료 후에는 ShowProducts
-*/
-
+  */
   const [loading, setLoading] = useState(false);
+
+    //🍀
+    let componentMounted = true;
+
 
   // 🍀js0309-0630. fetch data, {data_item.description.substring(0, 12)}...
   useEffect(() => {
@@ -25,13 +27,13 @@ const Products = () => {
       console.log(result.data);
 
       setData(result.data);
-      
+
       setLoading(false);
-    };    
+    };
     fetchItems();
   }, []);
 
-  // 🧨js0309-0610.
+  // 🥒js0309-0610.
   const Loading = () => {
     return <div>Loading....</div>;
   };
@@ -39,7 +41,7 @@ const Products = () => {
   const ShowProducts = () => {
     return (
       <div>
-        {/* 🧨js0309-0610.  */}
+        {/* 🥒js0309-0610.  */}
         <div className="button-container">
           <button className="myBtn">All</button>
           <button className="myBtn">Men</button>
@@ -49,20 +51,24 @@ const Products = () => {
         </div>
 
         <div className="items-container">
-            {/* 🧨js0309-0630.  */}
-            {data.map((data_item) => (
+          {/* 🥒js0309-0630.  */}
+          {data.map((data_item) => (
             <div className="items" key={data_item.id}>
-                <div className="item">
+              <div className="item">
                 <div className="img-parent">
-                    <img src={data_item.image} alt={data_item.title}/>
+                  <img src={data_item.image} alt={data_item.title} />
                 </div>
-                <div className="items">{data_item.title.substring(0, 12)}...</div>
+                <div className="title">
+                  {data_item.title.substring(0, 12)}...
+                </div>
                 <div className="price">$ {data_item.price}</div>
-                <div className="description">{data_item.description.substring(0, 12)}...</div>
-                <button className="myBtn">Buy Now</button>
+                <div className="description">
+                  {data_item.description.substring(0, 12)}...
                 </div>
+                <button className="myBtn">Buy Now</button>
+              </div>
             </div>
-            ))}
+          ))}
         </div>
       </div>
     );
@@ -70,7 +76,7 @@ const Products = () => {
 
   return (
     <div className="products">
-      {/*🧨js0309-0610.  */}
+      {/*🥒js0309-0610.  */}
       {loading ? <Loading /> : <ShowProducts />}
     </div>
   );
