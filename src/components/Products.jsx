@@ -14,11 +14,7 @@ const Products = () => {
   */
   const [loading, setLoading] = useState(false);
 
-    //🍀
-    let componentMounted = true;
-
-
-  // 🍀js0309-0630. fetch data, {data_item.description.substring(0, 12)}...
+   // 🍀js0309-0630. fetch data, {data_item.description.substring(0, 12)}...
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios("https://fakestoreapi.com/products");
