@@ -5,7 +5,7 @@
 export const addCart = (p_product) =>{
     return{
         type: 'ADDITEM',
-        payload: p_product 
+        payload: p_product ,
     }
 }
 
@@ -14,6 +14,6 @@ export const addCart = (p_product) =>{
 export const delCart = (p_product) =>{
     return{
         type: 'DELITEM',
-        payload: p_product 
+        payload: p_product ,
     }
 }

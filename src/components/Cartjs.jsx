@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { useSelector } from "react-redux";
 
 const Cartjs = () => {
-  return (
-    <div>Cartjs</div>
-  )
-}
+  const state = useSelector((state)=> state.reducer_handleCart);
 
-export default Cartjs
+  return (
+    <div className="cartjs">
+      <div className="item">
+        <div className="title">Name: {state.title}</div>
+        <div className="price">$ {state.price}</div>
+
+        <div className="description">Desc: {state.description}</div>
+      </div>
+    </div>
+  );
+};
+
+export default Cartjs;

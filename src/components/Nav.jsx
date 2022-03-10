@@ -20,8 +20,8 @@ const Nav = () => {
     <Link to="/" className="item myBtn">Home</Link>
     <Link to="/products" className="item myBtn">products</Link>
 
-    {/*  🍤bug. 왜 안되는지 모르겠음.  - state.length  */}
-    <Link to="/cart" className="item myBtn">Cart ({state})</Link>
+    {/*  🥒js0310-0440. redux   */}
+    <Link to="/cart" className="item myBtn">Cart ({state.length})</Link>
     
     </div>
   )

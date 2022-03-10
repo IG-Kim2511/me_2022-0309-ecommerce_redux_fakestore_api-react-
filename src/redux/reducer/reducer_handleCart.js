@@ -74,3 +74,5 @@ const reducer_handleCart = (state = cart, action) => {
       break;
   }
 };
+
+export default reducer_handleCart;
