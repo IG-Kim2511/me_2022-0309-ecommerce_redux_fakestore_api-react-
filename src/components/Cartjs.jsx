@@ -53,7 +53,7 @@ const Cartjs = () => {
 
               <div className="title">Name: {p_cartItem.title}</div>
 
-              <div className="price"> {p_cartItem.qty} x %{p_cartItem.price} = ${p_cartItem.qty * p_cartItem.price}</div> 
+              <div className="price"> {p_cartItem.qty} x %{p_cartItem.price} = ${parseFloat(p_cartItem.qty * p_cartItem.price).toFixed(2)}</div> 
 
               <div className="btn-parents">
 
@@ -63,14 +63,14 @@ const Cartjs = () => {
 
                 <button onClick={()=>reduxRemove(p_cartItem)}> <RemoveCircleOutlineRoundedIcon/> </button>
               </div>  
+              
+                {/* 🥒js0310-0440. redux  */}
+                <button className="myBtn del" onClick={()=>handleClose(p_cartItem)}>
+                    delete         
+                </button>
             </div>
 
           </div>
-
-          {/* 🥒js0310-0440. redux  */}
-          <button className="myBtn del" onClick={()=>handleClose(p_cartItem)}>
-              delete         
-          </button>
         </div>
       </div>
     );

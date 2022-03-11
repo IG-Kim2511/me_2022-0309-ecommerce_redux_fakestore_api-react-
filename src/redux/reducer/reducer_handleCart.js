@@ -66,8 +66,10 @@ const reducer_handleCart = (state = cart, action) => {
     case "DELITEM":
         const exist_del = state.find((x) => x.id === action.payload.id);
 
-        if (exist_del === 1 ) {
+        if (exist_del.qty === 1 ) {
             return state.filter((x)=>x.id !== exist_del.id);
+          
+     
             
         }else{
             return state.map((x)=> x.id === action.payload.id ? {...x,qty: x.qty-1} : x );
@@ -82,6 +84,8 @@ const reducer_handleCart = (state = cart, action) => {
 
         return state = state.filter((x)=>{
           return x.id !== action.payload.id
+
+          cart=[];
         })
         
         break;
