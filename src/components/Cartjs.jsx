@@ -53,7 +53,7 @@ const Cartjs = () => {
                 </button>
             </div>
 
-          </div>
+          </div>  
         </div>
       </div>
     );
