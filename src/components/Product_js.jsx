@@ -50,13 +50,6 @@ const Product_js = () => {
   // }
 
 
- const add_dispatch = () => {
-    return (
-      <div>Product_js</div>
-    )
-  }
-  
-
   const Loading = () => {
     return (
       <div>
