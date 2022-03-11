@@ -1,6 +1,12 @@
+
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { delCart, UltraDelCart } from "../redux/action";
+
+import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
+
+import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
+
 
 import './Cartjs.css'
 
@@ -29,9 +35,15 @@ const Cartjs = () => {
             </div>
 
             
+            {/*🥒js0310-0420.   */}
             <div className="item">
               <div className="title">Name: {p_cartItem.title}</div>
-              <div className="price"> {p_cartItem.qty} x %{p_cartItem.price} = ${p_cartItem.qty * p_cartItem.price}</div>     
+              <div className="price"> {p_cartItem.qty} x %{p_cartItem.price} = ${p_cartItem.qty * p_cartItem.price}</div> 
+              <div className="btn-parents">
+                <button className=""> <AddCircleRoundedIcon/> </button>
+                 <h3>{p_cartItem.qty}</h3>
+                <button className=""> <RemoveCircleOutlineRoundedIcon/> </button>
+              </div>  
             </div>
 
           </div>
