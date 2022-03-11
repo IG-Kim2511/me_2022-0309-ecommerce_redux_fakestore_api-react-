@@ -10,7 +10,7 @@ const Homejs = () => {
         <br />
         <h1>and You can see my CSS skills from my the other porjects on my portfolio</h1>
         <br />
-        <h2> Hello. I made a ecommerce shop website.</h2>
+        <h2> Hello. I built a ecommerce shop website.</h2>
         <br />
         <h2> Skills I used for this site are react-router. filter, redux, </h2>
 

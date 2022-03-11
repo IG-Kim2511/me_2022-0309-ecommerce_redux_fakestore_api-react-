@@ -1,0 +1,25 @@
+.cartjs .items-wrap{
+    padding:2rem
+}
+
+.cartjs .items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cartjs .img-parent,
+.cartjs .title,
+.cartjs .price,
+.cartjs .description{
+    padding: 2rem;
+
+    text-align: left;
+}
+
+.cartjs .del{ 
+    background: linear-gradient(to bottom, #dc3545 5%, #dc3545 100%);
+    background-color: #dc3545;    
+    border: 1px solid #dc3545;
+}
