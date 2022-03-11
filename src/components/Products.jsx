@@ -85,7 +85,7 @@ const Products = () => {
                 </div>
 
                 {/* 🥒0310-0255, Link, ~~/products/{id} 👉Product_js */}            
-                  <Link to={`/products/${filter_item.id}`}  className="myBtn">check item</Link>
+                  <Link to={`/products/${filter_item.id}`}  className="myBtn">Detail</Link>
              
               </div>
             </div>

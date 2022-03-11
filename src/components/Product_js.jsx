@@ -45,10 +45,17 @@ const Product_js = () => {
   
   const dispatch = useDispatch();
 
-  const addProduct = (p_product)=>{
-    dispatch(addCart(p_product))
-  }
+  // const addProduct = (p_product)=>{
+  //   dispatch(addCart(p_product))
+  // }
 
+
+ const add_dispatch = () => {
+    return (
+      <div>Product_js</div>
+    )
+  }
+  
 
   const Loading = () => {
     return (
@@ -80,7 +87,7 @@ const Product_js = () => {
         </div>
 
         {/* 🥒js0310-0440. redux  */}
-        <button className="myBtn" onClick={()=>addProduct(data_product)} >add to cart</button>
+        <button className="myBtn" onClick={()=>dispatch(addCart(data_product))} >add to cart</button>
       </div>
     );
   };

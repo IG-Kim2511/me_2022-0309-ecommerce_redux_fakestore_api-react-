@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCart, delCart, UltraDelCart } from "../redux/action";
+import { addCart, delCart, clearCart } from "../redux/action";
 
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 
@@ -13,26 +13,6 @@ import './Cartjs.css'
 const Cartjs = () => {
   const state = useSelector((state) => state.reducer_handleCart);
   const dispatch = useDispatch();
-
-
-  // 🍀0311-0240. delete item  
-  // 🥒js0311-0320  
-  // 🥒js0310-0440 UltraDELITEM  👉redeucer_handleCart.js , redux/index.js, Cartjs.jsx
-  const handleClose =(p_item)=>{
-    dispatch(UltraDelCart(p_item));
-  }
-
-
-  // 🥒js0310-0420. redux
-  const reduxAdd = (p_item) => {
-    dispatch(addCart(p_item));
-  }
-  
-  const reduxRemove = (p_item) => {
-    dispatch(delCart(p_item));
-  }
-  
-
 
   const cartItems = (p_cartItem) => {
     return (
@@ -57,15 +37,18 @@ const Cartjs = () => {
 
               <div className="btn-parents">
 
-                <button onClick={()=>reduxAdd(p_cartItem)}> <AddCircleRoundedIcon/> </button>
+               {/*🥒js0310-0420. 👉redeucer_handleCart.js  */}
+
+                <button onClick={()=>dispatch(addCart(p_cartItem))}> <AddCircleRoundedIcon/> </button>
 
                  <h3>{p_cartItem.qty}</h3>
 
-                <button onClick={()=>reduxRemove(p_cartItem)}> <RemoveCircleOutlineRoundedIcon/> </button>
+                <button onClick={()=> dispatch(delCart(p_cartItem))}> <RemoveCircleOutlineRoundedIcon/> </button>
               </div>  
               
-                {/* 🥒js0310-0440. redux  */}
-                <button className="myBtn del" onClick={()=>handleClose(p_cartItem)}>
+                {/* 🥒js0310-0440. 👉redeucer_handleCart.js  */}
+
+                <button className="myBtn del" onClick={()=> dispatch(clearCart(p_cartItem))}>
                     delete         
                 </button>
             </div>

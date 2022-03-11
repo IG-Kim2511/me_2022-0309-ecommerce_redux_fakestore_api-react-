@@ -22,9 +22,9 @@ export const delCart = (p_product) =>{
 }
 
 // 🍀 UltraDELITEM - delete item from cart
-export const UltraDelCart = (p_product) =>{
+export const clearCart = (p_product) =>{
     return{
-        type: 'UltraDELITEM',
+        type: 'clearItem',
         payload: p_product ,
     }
 }

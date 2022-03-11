@@ -20,7 +20,10 @@ const Nav = () => {
     <Link to="/" className="item myBtn">Home</Link>
     <Link to="/products" className="item myBtn">products</Link>
 
-    {/*  🥒js0310-0440. redux   */}
+    {/*  🥒js0310-0440. redux  
+        state = cart 
+        state.length : cart안의 아이템들 갯수
+      */}
     <Link to="/cart" className="item myBtn">Cart ({state.length})</Link>
     
     </div>
