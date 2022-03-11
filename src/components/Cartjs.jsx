@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { delCart, UltraDelCart } from "../redux/action";
+import { addCart, delCart, UltraDelCart } from "../redux/action";
 
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 
@@ -22,6 +22,18 @@ const Cartjs = () => {
     dispatch(UltraDelCart(p_item));
   }
 
+
+  // 🥒js0310-0420. redux
+  const reduxAdd = (p_item) => {
+    dispatch(addCart(p_item));
+  }
+  
+  const reduxRemove = (p_item) => {
+    dispatch(delCart(p_item));
+  }
+  
+
+
   const cartItems = (p_cartItem) => {
     return (
       <div>
@@ -36,13 +48,20 @@ const Cartjs = () => {
 
             
             {/*🥒js0310-0420.   */}
+            
             <div className="item">
+
               <div className="title">Name: {p_cartItem.title}</div>
+
               <div className="price"> {p_cartItem.qty} x %{p_cartItem.price} = ${p_cartItem.qty * p_cartItem.price}</div> 
+
               <div className="btn-parents">
-                <button className=""> <AddCircleRoundedIcon/> </button>
+
+                <button onClick={()=>reduxAdd(p_cartItem)}> <AddCircleRoundedIcon/> </button>
+
                  <h3>{p_cartItem.qty}</h3>
-                <button className=""> <RemoveCircleOutlineRoundedIcon/> </button>
+
+                <button onClick={()=>reduxRemove(p_cartItem)}> <RemoveCircleOutlineRoundedIcon/> </button>
               </div>  
             </div>
 
