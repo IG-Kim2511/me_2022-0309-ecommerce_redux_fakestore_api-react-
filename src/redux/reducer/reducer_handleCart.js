@@ -45,6 +45,7 @@ const reducer_handleCart = (state = cart, action) => {
         return state.map((x) =>
           x.id === action_product.id ? { ...x, qty: x.qty + 1 } : x
         );
+
       } else {
         return [
           ...state,
@@ -57,7 +58,7 @@ const reducer_handleCart = (state = cart, action) => {
 
       break;
 
-    case "ADDITEM":
+    case "DELITEM":
         const exist_del = state.find((x) => x.id === action_product.id);
 
         if (exist_del ===1 ) {
