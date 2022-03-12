@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCart, delCart, clearCart } from "../redux/action";
 
@@ -13,6 +13,8 @@ import './Cartjs.css'
 const Cartjs = () => {
   const state = useSelector((state) => state.reducer_handleCart);
   const dispatch = useDispatch();
+
+  const [price, setprice] = useState(0)
 
   const cartItems = (p_cartItem) => {
     return (

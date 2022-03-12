@@ -13,7 +13,7 @@
 .cartjs .title,
 .cartjs .price,
 .cartjs .description{
-    padding: 2rem;
+    padding: 0.5rem;
 
     text-align: center;
 }
@@ -23,12 +23,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-
 }
+
+
+
 .cartjs .del{ 
     background: linear-gradient(to bottom, #dc3545 5%, #dc3545 100%);
     background-color: #dc3545;    
     border: 1px solid #dc3545;
+}
+
+
+.cartjs img{
+    width:  100px;
+    height: 100px;    
+  }
+
+  /* @ 768px ()  */
+@media (max-width: 768px) {
+    .cartjs .items{
+
+        flex-direction: column;
+
+    } 
 }

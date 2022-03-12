@@ -23,3 +23,13 @@
     background-color: #dc3545;    
     border: 1px solid #dc3545;
 }
+
+/* @ 768px ()  */
+@media (max-width: 768px) {
+    .product_js .items{
+
+        flex-direction: column;
+
+    } 
+}
+
