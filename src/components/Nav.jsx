@@ -17,7 +17,7 @@ const Nav = () => {
   return (
     <div className="nav">
     
-    <Link to="/" className="item myBtn">Home</Link>
+    <Link to="https://ig-kim2511.github.io/me_2022-0309-ecommerce_redux_fakestore_api-react-build/" className="item myBtn">Home</Link>
     <Link to="/products" className="item myBtn">products</Link>
 
     {/*  🥒js0310-0440. redux  
