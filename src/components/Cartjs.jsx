@@ -14,7 +14,10 @@ const Cartjs = () => {
   const state = useSelector((state) => state.reducer_handleCart);
   const dispatch = useDispatch();
 
-  const [price, setprice] = useState(0)
+
+  const [totalPrice, setTotalPrice] = useState(0);
+  
+  // const [total, setTotal] = useState(0);
 
   const cartItems = (p_cartItem) => {
     return (
@@ -35,7 +38,7 @@ const Cartjs = () => {
 
               <div className="title">Name: {p_cartItem.title}</div>
 
-              <div className="price"> {p_cartItem.qty} x %{p_cartItem.price} = ${parseFloat(p_cartItem.qty * p_cartItem.price).toFixed(2)}</div> 
+              <div className="price"> {p_cartItem.qty} x ${p_cartItem.price} = ${parseFloat(p_cartItem.qty * p_cartItem.price).toFixed(2)}</div> 
 
               <div className="btn-parents">
 
