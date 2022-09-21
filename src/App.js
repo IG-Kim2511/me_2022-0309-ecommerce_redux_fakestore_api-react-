@@ -11,36 +11,39 @@ import Product_js from "./components/Product_js";
 import "./App.css";
 import Homejs from "./components/Homejs";
 
-/* 
-
-      <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
-        <Route path="teams" element={<Teams />}>
-          <Route path=":teamId" element={<Team />} />
-          <Route path="new" element={<NewTeamForm />} />
-          <Route index element={<LeagueStandings />} />
-        </Route>
-      </Route>
-*/
-/* 
-
- 
-            <Route path="/" index element={<Homejs/>} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<Product_js />} />
-            <Route path="cart" element={<Cartjs />} />
-*/
 function App() {
   return ( 
       <div className="App">
           <Nav />
 
-        <Routes>
-              <Route path="/" index element={<Homejs/>} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/products/:id" element={<Product_js />} />
-              <Route path="cart" element={<Cartjs />} />
+          <Routes>
+            <Route path="/" element={<Homejs/>} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<Product_js />} />
+            <Route path="cart" element={<Cartjs />} />
+
           </Routes>
+
+          <div>
+          <h1>Simple ecommerce website with fake shop API</h1>
+          <br />
+          <br />
+          <br />
+      
+          <h2>skills: react, redux, fetch api, router</h2>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1>Let's click Procucts tab on navigation</h1>
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1>(You can see my CSS skills from my the other porjects on my portfolio)</h1>
+          
+        </div>
       </div>   
   );
 }
